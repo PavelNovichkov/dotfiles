@@ -1,0 +1,4 @@
+xallexcepts- = 
+xallexcepts+ = 
+[view]
+application/pdf = okular --page %p --find %s %f
