@@ -1,0 +1,8 @@
+set editing-mode emacs
+
+set meta-flag on
+set input-meta on
+set convert-meta off
+set output-meta on
+
+"\eh": backward-kill-word
