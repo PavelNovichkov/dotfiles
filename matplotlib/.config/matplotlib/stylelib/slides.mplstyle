@@ -1,0 +1,19 @@
+# -*- mode: conf-colon; -*-
+
+# Font size  
+font.size : 20.0
+axes.labelsize : 20.0
+axes.titlesize : 20.0
+xtick.labelsize : 20.0
+ytick.labelsize : 20.0
+
+# Ticks
+xtick.top : True
+xtick.bottom : True
+xtick.direction : in
+ytick.left : True
+ytick.right : True
+ytick.direction : in
+
+# Without this setting, matplotlib cuts off the plot sometimes
+savefig.bbox : tight
