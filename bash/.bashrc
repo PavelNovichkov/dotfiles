@@ -1,3 +1,7 @@
+## Paths (also for non-interactive shells)
+
+PATH="$HOME"/.local/bin/:"$PATH"
+
 ## Test for an interactive shell
 
 case "$-" in
@@ -28,10 +32,6 @@ if [ "$TERM" != "dumb" ]  # Test for Emacs Tramp
 then
    PS1='\[\033[33m\][\t]\[\033[1;32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[00m\]\n\[\033[01;35m\]>>\[\033[00m\] '
 fi
-
-## Paths
-
-PATH="$HOME"/.local/bin/:"$PATH"
 
 ## Colors
 

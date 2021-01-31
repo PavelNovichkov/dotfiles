@@ -14,7 +14,7 @@ configs := bash \
 git_dir := $(HOME)/Documents/git
 
 
-all: emacs-repos link
+all: emacs-repos link services
 
 
 emacs-repos:
@@ -31,3 +31,7 @@ link:
 
 unlink: 
 	for config in $(configs); do stow -D -t $(HOME) $$config; done
+
+
+services:
+	systemctl --user enable emacs.service
