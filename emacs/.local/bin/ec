@@ -4,7 +4,7 @@
 
 # if no args open new frame
 if [ $# -eq 0 ]; then
-    emacsclient -c -n
+    emacsclient -c -n -a ""
     exit
 fi
 
