@@ -2,6 +2,7 @@ configs := bash \
            emacs \
            fish \
            git \
+           hunspell \
            matplotlib \
            mpv \
            readline \
