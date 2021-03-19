@@ -29,7 +29,7 @@ link:
 	for config in $(configs); do stow -t $(HOME) $$config; done
 
 
-unlink: 
+unlink:
 	for config in $(configs); do stow -D -t $(HOME) $$config; done
 
 
