@@ -1,3 +1,6 @@
+# Suppress greeting
+set -g fish_greeting
+
 # Add user path, like prepend $PATH in bash.
 contains ~/.local/bin/ $fish_user_paths; or set -Ua fish_user_paths ~/.local/bin/
 
