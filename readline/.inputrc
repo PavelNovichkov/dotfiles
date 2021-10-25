@@ -1,3 +1,6 @@
+# These bindings work in programs that use readline library, e.g.
+# bash, python, etc.
+
 set editing-mode emacs
 
 set meta-flag on
@@ -5,4 +8,9 @@ set input-meta on
 set convert-meta off
 set output-meta on
 
-"\eh": backward-kill-word
+# Add bindings for consistency with global text editing shortcuts, see
+# https://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts.
+"\x08": backward-kill-word # Control+Backspace
+"\e[3;5~": kill-word # Control+Delete
+# NB: Control+Delete does not work in tty as it does not distinguish
+# between Delete and Control+Delete.
