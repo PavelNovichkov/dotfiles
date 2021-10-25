@@ -1,14 +1,9 @@
 include "%L"
 
+# Greek alphabet (adapted from
+# https://askubuntu.com/questions/787113/compose-dead-greek-with-compose-key)
 #
-# From https://askubuntu.com/questions/787113/compose-dead-greek-with-compose-key:
-#
-# Greek alphabet
-#
-# Greek key bindings use corresponding Latin characters as much as possible and plausible.
-# Latin characters not present in Greek are used for Greek characters not present in Latin:
-# "H" invokes Eta; "J" invokes Khi (Chi)
-# "Q" invokes Theta; "U" invokes Upsilon; "V" invokes Psi; "W" invokes Omega
+# Bindings are consistent with Mathematica aliases except for "o"/"O".
 #
 # Greek Core Alphabet Uppercase
 <Multi_key> <g> <A> :       "Α"    U0391    # GREEK CAPITAL LETTER ALPHA
@@ -41,7 +36,7 @@ include "%L"
 <Multi_key> <g> <b> :       "β"    U03B2    # GREEK SMALL LETTER BETA
 <Multi_key> <g> <g> :       "γ"    U03B3    # GREEK SMALL LETTER GAMMA
 <Multi_key> <g> <d> :       "δ"    U03B4    # GREEK SMALL LETTER DELTA
-<Multi_key> <g> <e> :       "ε"    U03B5    # GREEK SMALL LETTER EPSILON
+<Multi_key> <g> <e> :       "ϵ"    U03F5    # GREEK LUNATE EPSILON SYMBOL
 <Multi_key> <g> <z> :       "ζ"    U03B6    # GREEK SMALL LETTER ZETA
 <Multi_key> <g> <h> :       "η"    U03B7    # GREEK SMALL LETTER ETA
 <Multi_key> <g> <q> :       "θ"    U03B8    # GREEK SMALL LETTER THETA
@@ -57,21 +52,18 @@ include "%L"
 <Multi_key> <g> <s> :       "σ"    U03C3    # GREEK SMALL LETTER SIGMA
 <Multi_key> <g> <t> :       "τ"    U03C4    # GREEK SMALL LETTER TAU
 <Multi_key> <g> <u> :       "υ"    U03C5    # GREEK SMALL LETTER UPSILON
-<Multi_key> <g> <f> :       "φ"    U03C6    # GREEK SMALL LETTER PHI
+<Multi_key> <g> <j> :       "φ"    U03C6    # GREEK SMALL LETTER PHI
+<Multi_key> <g> <f> :       "ϕ"    U03D5    # GREEK PHI SYMBOL
 <Multi_key> <g> <c> :       "χ"    U03C7    # GREEK SMALL LETTER CHI
 <Multi_key> <g> <y> :       "ψ"    U03C8    # GREEK SMALL LETTER PSI
 <Multi_key> <g> <w> :       "ω"    U03C9    # GREEK SMALL LETTER OMEGA
 #
-# Variants
-<Multi_key> <g> <v> <H> :   "Ͱ"    U0370    # GREEK CAPITAL LETTER HETA
-<Multi_key> <g> <v> <h> :   "ͱ"    U0371    # GREEK SMALL LETTER HETA
-<Multi_key> <g> <v> <b> :   "ϐ"    U03D0    # GREEK BETA SYMBOL
-<Multi_key> <g> <v> <e> :   "ϵ"    U03F5    # GREEK LUNATE EPSILON SYMBOL
-<Multi_key> <g> <v> <Q> :   "ϴ"    U03F4    # GREEK CAPITAL THETA SYMBOL
+# Variants (\var* in LaTeX, {Curly,Final}* in Mathematica)
+<Multi_key> <g> <v> <e> :   "ε"    U03B5    # GREEK SMALL LETTER EPSILON
 <Multi_key> <g> <v> <q> :   "ϑ"    U03D1    # GREEK THETA SYMBOL
 <Multi_key> <g> <v> <k> :   "ϰ"    U03F0    # GREEK KAPPA SYMBOL
 <Multi_key> <g> <v> <p> :   "ϖ"    U03D6    # GREEK PI SYMBOL
+<Multi_key> <g> <v> <r> :   "ϱ"    U03F1    # GREEK RHO SYMBOL
+<Multi_key> <g> <v> <s> :   "ς"    U03C2    # GREEK SMALL LETTER FINAL SIGMA
 <Multi_key> <g> <v> <U> :   "ϒ"    U03D2    # GREEK UPSILON WITH HOOK SYMBOL
-<Multi_key> <g> <v> <Y> :   "ϒ"    U03D2    # GREEK UPSILON WITH HOOK SYMBOL
-<Multi_key> <g> <v> <f> :   "ϕ"    U03D5    # GREEK PHI SYMBOL
-<Multi_key> <g> <v> <x> :   "☧"    U2627    # CHI RHO
+<Multi_key> <g> <v> <f> :   "φ"    U03C6    # GREEK SMALL LETTER PHI
