@@ -67,3 +67,10 @@ include "%L"
 <Multi_key> <g> <v> <s> :   "ς"    U03C2    # GREEK SMALL LETTER FINAL SIGMA
 <Multi_key> <g> <v> <U> :   "ϒ"    U03D2    # GREEK UPSILON WITH HOOK SYMBOL
 <Multi_key> <g> <v> <f> :   "φ"    U03C6    # GREEK SMALL LETTER PHI
+
+# Other useful symbols
+<Multi_key> <e> <m> :       "—"    U2014    # EM DASH
+<Multi_key> <e> <n> :       "–"    U2013    # EN DASH
+<Multi_key> <e> <u> :       "€"    U20AC    # EURO SIGN
+<Multi_key> <m> <p> :       "∓"    U2213    # MINUS-OR-PLUS SIGN
+<Multi_key> <p> <m> :       "±"    U00B1    # PLUS-OR-MINUS SIGN
