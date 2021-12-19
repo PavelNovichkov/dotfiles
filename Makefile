@@ -1,5 +1,6 @@
 configs := bash \
            emacs \
+           firefox \
            fish \
            git \
            htop \
