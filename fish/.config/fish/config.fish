@@ -25,3 +25,6 @@ if test "$INSIDE_EMACS" = "vterm" -a -n "$EMACS_VTERM_PATH"
 
     set_emacs_colors  # Fix colors
 end
+
+# Aliases
+alias trash="send2trash"
