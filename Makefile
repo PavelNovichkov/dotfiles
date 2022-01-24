@@ -25,6 +25,8 @@ emacs-repos:
 		git clone "git@github.com:extheo/.emacs.d.git" $(git_dir)/emacs.d; fi
 	if [ ! -d $(git_dir)/chemacs2 ]; then \
 		git clone "https://github.com/plexus/chemacs2.git" $(git_dir)/chemacs2; fi
+	if [ -d $(HOME)/.emacs.d ]; then \
+		mv $(HOME)/.emacs.d $(HOME)/.emacs.d.bak; fi
 	ln -sf $(git_dir)/chemacs2 $(HOME)/.emacs.d
 
 
