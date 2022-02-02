@@ -48,6 +48,11 @@ man() {
     command man "$@"
 }
 
+## GPG-agent for SSH
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
 ## Aliases
 
 alias ll='ls -alFh'
