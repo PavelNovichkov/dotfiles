@@ -26,5 +26,10 @@ if test "$INSIDE_EMACS" = "vterm" -a -n "$EMACS_VTERM_PATH"
     set_emacs_colors  # Fix colors
 end
 
+# GPG-agent for SSH
+set -x GPG_TTY (tty)
+set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
 # Aliases
 alias trash="send2trash"
