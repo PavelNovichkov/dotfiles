@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+<xkbConfigRegistry version="1.1">
+  <layoutList>
+    <layout>
+      <configItem>
+        <name>erg</name>
+        <shortDescription>erg</shortDescription>
+        <description>English+Russian layout for ergonomic keyboards</description>
+      </configItem>
+    </layout>
+    <layout>
+      <configItem>
+        <name>en-colemak-dh-mod</name>
+        <shortDescription>en</shortDescription>
+        <description>English (Colemak-DH-mod)</description>
+      </configItem>
+    </layout>
+  </layoutList>
+</xkbConfigRegistry>
