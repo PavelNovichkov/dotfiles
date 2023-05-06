@@ -3,6 +3,7 @@ configs := bash \
            firefox \
            fish \
            git \
+           gopass \
            htop \
            hunspell \
            matplotlib \
