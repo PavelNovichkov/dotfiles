@@ -7,6 +7,7 @@ configs := bash \
            hunspell \
            matplotlib \
            mpv \
+           rclone \
            readline \
            recoll \
            ssh \
