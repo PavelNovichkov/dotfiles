@@ -1,9 +1,0 @@
-[Unit]
-Description=Remove old files from trash
-
-[Service]
-Type=simple
-ExecStart=trash-empty 30
-
-[Install]
-WantedBy=default.target

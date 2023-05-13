@@ -12,7 +12,6 @@ configs := bash \
            recoll \
            ssh \
            tmux \
-           trash-cli \
            xkb \
            youtube-dl
 emacs_dir := $(HOME)/meta/emacs
