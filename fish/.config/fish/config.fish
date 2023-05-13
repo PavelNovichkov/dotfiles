@@ -32,4 +32,4 @@ set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 
 # Aliases
-alias trash="send2trash"
+alias trash="gio trash"
