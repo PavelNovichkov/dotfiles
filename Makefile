@@ -33,8 +33,8 @@ emacs-repos:
 
 
 link:
-	for config in $(configs); do stow -t $(HOME) $$config; done
+	for config in $(configs); do stow --no-folding -t $(HOME) $$config; done
 
 
 unlink:
-	for config in $(configs); do stow -D -t $(HOME) $$config; done
+	for config in $(configs); do stow --no-folding -D -t $(HOME) $$config; done
