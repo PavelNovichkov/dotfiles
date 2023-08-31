@@ -3,18 +3,18 @@ xkb_symbols "basic" {
 
     name[Group1]= "English+Russian";
 
-    key <TLDE> { [ grave, asciitilde ] };
+    key <TLDE> { [ grave, asciitilde, ellipsis, nobreakspace ] };
     key <AE01> { [ 1, exclam, Cyrillic_io, Cyrillic_IO ] };
     key <AE02> { [ 2, at, Cyrillic_e, Cyrillic_E ] };
     key <AE03> { [ 3, numbersign ] };
-    key <AE04> { [ 4, dollar ] };
+    key <AE04> { [ 4, dollar, EuroSign ] };
     key <AE05> { [ 5, percent ] };
     key <AE06> { [ 6, asciicircum ] };
     key <AE07> { [ 7, ampersand ] };
     key <AE08> { [ 8, asterisk ] };
-    key <AE09> { [ 9, parenleft ] };
-    key <AE10> { [ 0, parenright ] };
-    key <AE11> { [ minus, underscore ] };
+    key <AE09> { [ 9, parenleft, leftsinglequotemark ] };
+    key <AE10> { [ 0, parenright, rightsinglequotemark ] };
+    key <AE11> { [ minus, underscore, endash, emdash ] };
     key <AE12> { [ equal, plus ] };
 
     key <AD01> { [ q, Q, Cyrillic_shorti, Cyrillic_SHORTI ] };
@@ -27,8 +27,8 @@ xkb_symbols "basic" {
     key <AD08> { [ i, I, Cyrillic_de, Cyrillic_DE ] };
     key <AD09> { [ o, O, Cyrillic_zhe, Cyrillic_ZHE ] };
     key <AD10> { [ p, P, Cyrillic_ka, Cyrillic_KA ] };
-    key <AD11> { [ bracketleft, braceleft ] };
-    key <AD12> { [ bracketright, braceright ] };
+    key <AD11> { [ bracketleft, braceleft, leftdoublequotemark, guillemotleft ] };
+    key <AD12> { [ bracketright, braceright, rightdoublequotemark, guillemotright ] };
 
     key <AC01> { [ a, A, Cyrillic_ef, Cyrillic_EF ] };
     key <AC02> { [ s, S, Cyrillic_ve, Cyrillic_VE ] };
