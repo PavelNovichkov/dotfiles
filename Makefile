@@ -1,6 +1,7 @@
 configs := bash \
            emacs \
            fish \
+           fonts \
            git \
            gopass \
            htop \
