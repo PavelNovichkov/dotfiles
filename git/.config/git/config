@@ -4,5 +4,8 @@
 [include]
         path = secrets
 
+[init]
+        defaultBranch = main
+
 [status]
 	showUntrackedFiles = all
