@@ -12,7 +12,6 @@ configs := bash \
            rclone \
            readline \
            recoll \
-           ssh \
            tmux \
            xkb \
            youtube-dl
