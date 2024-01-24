@@ -54,4 +54,6 @@ xkb_symbols "colemak_dh_mod" {
     key <AB10> { [ slash, question ] };
 
     key <BKSL> { [ backslash, bar ] };
+
+    include "compose(ralt)"
 };
