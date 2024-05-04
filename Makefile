@@ -1,7 +1,6 @@
 configs := bash \
            emacs \
            fish \
-           fonts \
            git \
            gnome \
            gopass \
