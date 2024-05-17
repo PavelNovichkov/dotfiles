@@ -1,1 +1,5 @@
 ^/setup.sh
+^/.config/emacs/.git
+^/.config/emacs/.gitignore
+^/.config/emacs/LICENSE
+^/.config/emacs/README.org
