@@ -3,6 +3,7 @@ configs := bash \
            fish \
            git \
            gnome \
+           go \
            gopass \
            htop \
            hunspell \
