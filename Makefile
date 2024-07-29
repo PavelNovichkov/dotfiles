@@ -6,7 +6,6 @@ configs := bash \
            go \
            gopass \
            htop \
-           hunspell \
            matplotlib \
            mpv \
            rclone \
