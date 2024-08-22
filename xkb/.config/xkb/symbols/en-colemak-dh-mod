@@ -55,5 +55,15 @@ xkb_symbols "colemak_dh_mod" {
 
     key <BKSL> { [ backslash, bar ] };
 
+    // Sticky modifiers
+    key <LFSH> { actions = [ LatchMods(mods=Shift,clearLocks) ] };
+    key <RTSH> { actions = [ LatchMods(mods=Shift,clearLocks) ] };
+    key <LCTL> { actions = [ LatchMods(mods=Control,clearLocks) ] };
+    key <RCTL> { actions = [ LatchMods(mods=Control,clearLocks) ] };
+    key <LALT> { actions = [ LatchMods(mods=Alt,clearLocks) ] };
+    // <RALT> is used as a Compose key, see below.
+    key <LWIN> { actions = [ LatchMods(mods=Super,clearLocks) ] };
+    key <RWIN> { actions = [ LatchMods(mods=Super,clearLocks) ] };
+
     include "compose(ralt)"
 };
