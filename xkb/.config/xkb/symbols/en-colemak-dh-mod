@@ -1,3 +1,5 @@
+// -*- mode: c; -*-
+
 partial alphanumeric_keys modifier_keys
 xkb_symbols "colemak_dh_mod" {
 
