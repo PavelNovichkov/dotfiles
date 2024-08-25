@@ -89,6 +89,7 @@
 <Multi_key> <period> <c> <i> :    "∘"    U2218    # \circ
 <Multi_key> <period> <u> <n> :    "∪"    U222A    # \cup
 <Multi_key> <period> <d> <a> :    "†"    U2020    # \dagger
+<Multi_key> <period> <d> <i> :    "÷"    U00F7    # \div
 <Multi_key> <period> <l> <t> :    "⋉"    U22C9    # \ltimes
 <Multi_key> <period> <m> <p> :    "∓"    U2213    # \mp
 <Multi_key> <o> <p> :    "⊕"    U2295    # \oplus
@@ -96,7 +97,7 @@
 <Multi_key> <period> <p> <m> :    "±"    U00B1    # \pm
 <Multi_key> <period> <r> <t> :    "⋊"    U22CA    # \rtimes
 <Multi_key> <backslash> :    "∖"    U2216    # \setminus
-<Multi_key> <period> <t> <i> :    "⨯"    U2A2F    # \times
+<Multi_key> <period> <t> <i> :    "×"    U00D7    # \times
 
 ### Relation symbols
 <Multi_key> <period> <a> <e> :    "≈"    U2248    # \approx
