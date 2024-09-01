@@ -5,9 +5,9 @@ xkb_symbols "basic" {
 
     name[Group1]= "English+Russian";
 
-    key <TLDE> { [ grave, asciitilde, ellipsis, nobreakspace ] };
-    key <AE01> { [ 1, exclam, Cyrillic_io, Cyrillic_IO ] };
-    key <AE02> { [ 2, at, Cyrillic_e, Cyrillic_E ] };
+    key <TLDE> { [ grave, asciitilde, Cyrillic_HA ] };
+    key <AE01> { [ 1, exclam, ellipsis, nobreakspace ] };
+    key <AE02> { [ 2, at ] };
     key <AE03> { [ 3, numbersign ] };
     key <AE04> { [ 4, dollar, EuroSign ] };
     key <AE05> { [ 5, percent ] };
@@ -24,7 +24,7 @@ xkb_symbols "basic" {
     key <AD03> { [ e, E, Cyrillic_el, Cyrillic_EL ] };
     key <AD04> { [ r, R, Cyrillic_yeru, Cyrillic_YERU ] };
     key <AD05> { [ t, T, Cyrillic_a, Cyrillic_A ] };
-    key <AD06> { [ y, Y, Cyrillic_shcha, Cyrillic_SHCHA ] };
+    key <AD06> { [ y, Y, Cyrillic_ze, Cyrillic_ZE ] };
     key <AD07> { [ u, U, Cyrillic_sha, Cyrillic_SHA ] };
     key <AD08> { [ i, I, Cyrillic_de, Cyrillic_DE ] };
     key <AD09> { [ o, O, Cyrillic_zhe, Cyrillic_ZHE ] };
@@ -32,17 +32,17 @@ xkb_symbols "basic" {
     key <AD11> { [ bracketleft, braceleft, leftdoublequotemark, guillemotleft ] };
     key <AD12> { [ bracketright, braceright, rightdoublequotemark, guillemotright ] };
 
-    key <AC01> { [ a, A, Cyrillic_ef, Cyrillic_EF ] };
+    key <AC01> { [ a, A, Cyrillic_be, Cyrillic_BE ] };
     key <AC02> { [ s, S, Cyrillic_ve, Cyrillic_VE ] };
     key <AC03> { [ d, D, Cyrillic_em, Cyrillic_EM ] };
     key <AC04> { [ f, F, Cyrillic_u, Cyrillic_U ] };
     key <AC05> { [ g, G, Cyrillic_pe, Cyrillic_PE ] };
-    key <AC06> { [ h, H, Cyrillic_softsign, Cyrillic_hardsign ] };
+    key <AC06> { [ h, H, Cyrillic_softsign, Cyrillic_SOFTSIGN ] };
     key <AC07> { [ j, J, Cyrillic_en, Cyrillic_EN ] };
     key <AC08> { [ k, K, Cyrillic_te, Cyrillic_TE ] };
     key <AC09> { [ l, L, Cyrillic_ghe, Cyrillic_GHE ] };
-    key <AC10> { [ semicolon, colon, Cyrillic_BE, Cyrillic_YU ] };
-    key <AC11> { [ apostrophe, quotedbl, Cyrillic_ze, Cyrillic_ZE ] };
+    key <AC10> { [ semicolon, colon ] };
+    key <AC11> { [ apostrophe, quotedbl, Cyrillic_ha ] };
 
     key <AB01> { [ z, Z, Cyrillic_ya, Cyrillic_YA ] };
     key <AB02> { [ x, X, Cyrillic_che, Cyrillic_CHE ] };
@@ -51,11 +51,12 @@ xkb_symbols "basic" {
     key <AB05> { [ b, B, Cyrillic_ie, Cyrillic_IE ] };
     key <AB06> { [ n, N, Cyrillic_o, Cyrillic_O ] };
     key <AB07> { [ m, M, Cyrillic_er, Cyrillic_ER ] };
-    key <AB08> { [ comma, less, Cyrillic_be ] };
-    key <AB09> { [ period, greater, Cyrillic_yu ] };
-    key <AB10> { [ slash, question, Cyrillic_ha, Cyrillic_HA ] };
+    key <AB08> { [ comma, less ] };
+    key <AB09> { [ period, greater ] };
+    key <AB10> { [ slash, question, Cyrillic_yu ] };
 
-    key <BKSL> { [ backslash, bar ] };
+    key <BKSL> { [ backslash, bar, backslash, Cyrillic_YU ] };
+
     // HACK Setting sticky mods in en-colemak-dh-mod makes them sticky in all
     // layouts, so we have to restore the default behavior explicitly.
     key <LFSH> { actions = [ SetMods(mods=Shift,clearLocks) ] };
