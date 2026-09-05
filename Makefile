@@ -8,13 +8,11 @@ configs := bash \
            htop \
            julia \
            matplotlib \
-           mpv \
            rclone \
            readline \
            recoll \
            tmux \
-           xkb \
-           youtube-dl
+           xkb
 
 
 all: link
