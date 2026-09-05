@@ -241,13 +241,15 @@
 <Multi_key> <Multi_key> <d> <k> :    "K"    U212A    # degree Kelvin
 
 ## Cyrillic symbols
-<Multi_key> <Cyrillic_ie> :    "ё"    Cyrillic_io
-<Multi_key> <Cyrillic_IE> :    "Ё"    Cyrillic_IO
+<Multi_key> <Cyrillic_o> :    "ё"    Cyrillic_io
+<Multi_key> <Cyrillic_O> :    "Ё"    Cyrillic_IO
 <Multi_key> <Cyrillic_softsign> :    "ъ"    Cyrillic_hardsign
 <Multi_key> <Cyrillic_SOFTSIGN> :    "Ъ"    Cyrillic_HARDSIGN
-<Multi_key> <Cyrillic_be> :    "ф"    Cyrillic_ef
-<Multi_key> <Cyrillic_BE> :    "Ф"    Cyrillic_EF
-<Multi_key> <Cyrillic_ze> :    "э"    Cyrillic_e
-<Multi_key> <Cyrillic_ZE> :    "Э"    Cyrillic_E
+<Multi_key> <Cyrillic_che> :    "ц"    Cyrillic_tse
+<Multi_key> <Cyrillic_CHE> :    "Ц"    Cyrillic_TSE
+<Multi_key> <Cyrillic_ie> :    "э"    Cyrillic_e
+<Multi_key> <Cyrillic_IE> :    "Э"    Cyrillic_E
 <Multi_key> <Cyrillic_sha> :    "щ"    Cyrillic_shcha
 <Multi_key> <Cyrillic_SHA> :    "Щ"    Cyrillic_SHCHA
+<Multi_key> <Cyrillic_u> :    "ю"    Cyrillic_yu
+<Multi_key> <Cyrillic_U> :    "Ю"    Cyrillic_YU
