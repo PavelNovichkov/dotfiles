@@ -57,17 +57,6 @@ xkb_symbols "basic" {
 
     key <BKSL> { [ backslash, bar, backslash ] };
 
-    // HACK Setting sticky mods in en-colemak-dh-mod makes them sticky in all
-    // layouts, so we have to restore the default behavior explicitly.
-    key <LFSH> { actions = [ SetMods(mods=Shift,clearLocks) ] };
-    key <RTSH> { actions = [ SetMods(mods=Shift,clearLocks) ] };
-    key <LCTL> { actions = [ SetMods(mods=Control,clearLocks) ] };
-    key <RCTL> { actions = [ SetMods(mods=Control,clearLocks) ] };
-    key <LALT> { actions = [ SetMods(mods=Alt,clearLocks) ] };
-    // <RALT> is used as a level3 modifier, see below.
-    key <LWIN> { actions = [ SetMods(mods=Super,clearLocks) ] };
-    key <RWIN> { actions = [ SetMods(mods=Super,clearLocks) ] };
-
     include "level3(ralt_switch)"
     include "compose(menu)"
 };
