@@ -1,8 +1,6 @@
 # Suppress greeting
 set -g fish_greeting
 
-# Add user path, like prepend $PATH in bash.
-contains ~/.local/bin/ $fish_user_paths; or set -Ua fish_user_paths ~/.local/bin/
 # Disable nearly all coloring
 fish_config theme choose none
 
@@ -32,4 +30,5 @@ set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 
 # Aliases
+alias ll="ls -alFh"
 alias trash="gio trash"
