@@ -136,6 +136,8 @@
 <Multi_key> <period> <o> <w> :    "∋"    U220B
 <Multi_key> <slash> <m> <i> :    "∤"    U2224    # \nmid
 <Multi_key> <slash> <i> <n> :    "∉"    U2209    # \notin
+<Multi_key> <period> <p> <a> :    "∥"    U2225    # \parallel
+<Multi_key> <period> <p> <e> :    "⟂"    U27C2    # \perp
 <Multi_key> <period> <p> <r> :    "∝"    U221D    # \propto
 <Multi_key> <period> <s> <b> :    "⊂"    U2282    # \subset
 <Multi_key> <period> <s> <p> :    "⊃"    U2283    # \supset
