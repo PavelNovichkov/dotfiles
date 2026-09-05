@@ -1,0 +1,7 @@
+[Unit]
+Description=Run Recoll indexing
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/flatpak run --command=recollindex org.recoll.recoll
+Nice=10
