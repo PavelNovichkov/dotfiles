@@ -6,6 +6,7 @@ configs := bash \
            go \
            gopass \
            htop \
+           julia \
            matplotlib \
            mpv \
            rclone \
