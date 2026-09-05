@@ -3,6 +3,8 @@ set -g fish_greeting
 
 # Add user path, like prepend $PATH in bash.
 contains ~/.local/bin/ $fish_user_paths; or set -Ua fish_user_paths ~/.local/bin/
+# Disable nearly all coloring
+fish_config theme choose none
 
 # Fix emacs tramp: https://github.com/oh-my-fish/theme-bobthefish/issues/148.
 if test "$TERM" = "dumb"
@@ -22,8 +24,6 @@ if test "$INSIDE_EMACS" = "vterm" -a -n "$EMACS_VTERM_PATH"
         source $vterm_config
         function fish_title; pwd; end  # Redefine the title
     end
-
-    set_emacs_colors  # Fix colors
 end
 
 # GPG-agent for SSH
