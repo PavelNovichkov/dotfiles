@@ -1,5 +1,6 @@
 dotfiles_packages:
   - bash
+  - emacs
   - fish
   - git
   - go
