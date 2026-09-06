@@ -1,0 +1,13 @@
+HOMEBREW_PREFIX={{ homebrew_prefix }}
+HOMEBREW_CELLAR={{ homebrew_prefix }}/Cellar
+HOMEBREW_REPOSITORY={{ homebrew_prefix }}/Homebrew
+
+# Append Homebrew tools at the end of PATH to prevent conflicts with system
+# tools. See https://github.com/ublue-os/bluefin/issues/687 for details.
+PATH=${PATH}:{{ homebrew_prefix }}/bin:{{ homebrew_prefix }}/sbin
+
+MANPATH=${MANPATH}:{{ homebrew_prefix }}/share/man
+INFOPATH=${INFOPATH}:{{ homebrew_prefix }}/share/info
+
+HOMEBREW_NO_AUTO_UPDATE=1
+HOMEBREW_UPDATE_TO_TAG=1
