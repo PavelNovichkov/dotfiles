@@ -12,5 +12,6 @@ dotfiles_packages:
   - rclone
   - readline
   - recoll
+  - tex
   - tmux
   - xkb
