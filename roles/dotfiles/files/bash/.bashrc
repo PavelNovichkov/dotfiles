@@ -1,18 +1,23 @@
-PATH="$HOME"/.local/bin:"$PATH"
-
-# Append Homebrew tools at the end of PATH to prevent conflicts with system
-# tools. See https://github.com/ublue-os/bluefin/issues/687 for details.
-if [ -d /home/linuxbrew/.linuxbrew/bin ]; then
-    PATH="$PATH":/home/linuxbrew/.linuxbrew/bin
+# System-wide configuration first.
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+elif [ -f /etc/bash.bashrc ]; then
+    . /etc/bash.bashrc
 fi
 
-export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
-export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar"
-export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew"
+# Load systemd environment if it was not inherited (e.g. on SSH login).
+if [ -z "$ENVIRONMENT_D_LOADED" ] && [ -d "$HOME/.config/environment.d" ]; then
+    set -a
+    for _envd in "$HOME"/.config/environment.d/*.conf; do
+        [ -f "$_envd" ] && . "$_envd"
+    done
+    set +a
+    unset _envd
+fi
 
-# HACK: Homebrew version of dvisvgm does not work without these variables set.
-export TEXMFCNF="$(dirname "$(kpsewhich texmf.cnf)")"
-export TEXMFROOT="$(kpsewhich --var-value=TEXMFROOT)"
-
-# Defensive export for child processes (should be unnecessary).
-export PATH
+if [ -d "$HOME/.bashrc.d" ]; then
+    for _rc in "$HOME"/.bashrc.d/*.sh; do
+        [ -f "$_rc" ] && . "$_rc"
+    done
+    unset _rc
+fi
