@@ -9,6 +9,7 @@ dotfiles_packages:
   - htop
   - julia
   - matplotlib
+  - ptyxis
   - rclone
   - readline
   - recoll

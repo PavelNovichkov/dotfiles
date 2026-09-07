@@ -1,0 +1,7 @@
+/*  Extra padding for ptyxis */
+VteTerminal,
+ TerminalScreen,
+ vte-terminal {
+     padding: 15px;
+     -VteTerminal-inner-border: 10px;
+ }
