@@ -1,0 +1,11 @@
+- name: "install dotfiles"
+  loop:
+    - gopass
+    - ptyxis
+    - rclone
+    - recoll
+    - xkb
+  ansible.builtin.copy:
+    src: "{{ item }}/"
+    dest: "{{ ansible_facts['user_dir'] }}/"
+    mode: preserve
