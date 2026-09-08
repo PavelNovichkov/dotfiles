@@ -2,7 +2,7 @@
         editor = "emacsclient"
 
 [credential]
-	helper = gopass
+        helper = gopass
 
 [include]
         path = secrets
