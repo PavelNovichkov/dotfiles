@@ -17,7 +17,6 @@
   ansible.builtin.git:
     repo: https://github.com/Homebrew/brew.git
     dest: "{{ homebrew_prefix }}/Homebrew"
-    # version: main
     # Leave an existing checkout alone: it is updated by `brew update`, not by us.
     update: false
   register: homebrew_clone
