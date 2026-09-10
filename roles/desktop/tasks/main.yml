@@ -9,3 +9,14 @@
     src: "{{ item }}/"
     dest: "{{ ansible_facts['user_dir'] }}/"
     mode: preserve
+
+- name: "install fonts"
+  community.general.homebrew:
+    name:
+      - font-juliamono
+      - font-ibm-plex-math
+      - font-ibm-plex-mono
+      - font-ibm-plex-sans
+      - font-ibm-plex-serif
+      - font-intel-one-mono
+    state: present
