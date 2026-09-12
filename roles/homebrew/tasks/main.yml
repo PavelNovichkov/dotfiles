@@ -44,3 +44,11 @@
     src: homebrew.conf.j2
     dest: "{{ ansible_facts['user_dir'] }}/.config/environment.d/homebrew.conf"
     mode: "0644"
+
+- name: "add personal tap"
+  community.general.homebrew_tap:
+    name: PavelNovichkov/tap
+    # Use SSH instead of the default HTTPS.
+    url: "git@github.com:PavelNovichkov/homebrew-tap.git"
+    trust: true
+    state: present
