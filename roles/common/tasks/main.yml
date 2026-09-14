@@ -2,6 +2,7 @@
   loop:
     - bash
     - env
+    - fish
     - readline
     - tmux
   ansible.builtin.copy:

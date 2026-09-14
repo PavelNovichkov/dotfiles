@@ -24,11 +24,6 @@ if test "$INSIDE_EMACS" = "vterm" -a -n "$EMACS_VTERM_PATH"
     end
 end
 
-# GPG-agent for SSH
-set -x GPG_TTY (tty)
-set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
-
 # Aliases
 alias ll="ls -alFh"
 alias trash="gio trash"

@@ -1,6 +1,5 @@
 dotfiles_packages:
   - emacs
-  - fish
   - git
   - go
   - htop
