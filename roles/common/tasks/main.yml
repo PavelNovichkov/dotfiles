@@ -3,6 +3,7 @@
     - bash
     - env
     - fish
+    - git
     - readline
     - tmux
   ansible.builtin.copy:

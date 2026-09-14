@@ -1,0 +1,5 @@
+[core]
+        editor = "emacsclient"
+
+[credential]
+        helper = gopass

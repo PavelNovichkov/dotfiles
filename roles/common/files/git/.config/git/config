@@ -1,11 +1,10 @@
-[core]
-        editor = "emacsclient"
-
-[credential]
-        helper = gopass
+[user]
+        name = Pavel Novichkov
+        email = 9932831+PavelNovichkov@users.noreply.github.com
 
 [include]
         path = secrets
+        path = local
 
 [init]
         defaultBranch = main

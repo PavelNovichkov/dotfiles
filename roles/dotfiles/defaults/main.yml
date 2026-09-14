@@ -1,6 +1,5 @@
 dotfiles_packages:
   - emacs
-  - git
   - go
   - htop
   - julia

@@ -1,6 +1,7 @@
 - name: "install dotfiles"
   loop:
     - fish
+    - git
     - gopass
     - ptyxis
     - rclone
