@@ -1,6 +1,4 @@
 dotfiles_packages:
-  - bash
-  - env
   - emacs
   - fish
   - git
@@ -8,6 +6,4 @@ dotfiles_packages:
   - htop
   - julia
   - matplotlib
-  - readline
   - tex
-  - tmux

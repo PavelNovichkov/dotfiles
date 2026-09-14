@@ -1,0 +1,10 @@
+- name: "install dotfiles"
+  loop:
+    - bash
+    - env
+    - readline
+    - tmux
+  ansible.builtin.copy:
+    src: "{{ item }}/"
+    dest: "{{ ansible_facts['user_dir'] }}/"
+    mode: preserve
