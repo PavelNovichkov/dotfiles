@@ -1,7 +1,5 @@
 dotfiles_packages:
   - emacs
   - go
-  - htop
   - julia
-  - matplotlib
   - tex
