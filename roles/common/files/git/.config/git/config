@@ -1,6 +1,7 @@
 [user]
         name = Pavel Novichkov
         email = 9932831+PavelNovichkov@users.noreply.github.com
+        signingkey = ~/.ssh/yubikey.pub
 
 [include]
         path = secrets
