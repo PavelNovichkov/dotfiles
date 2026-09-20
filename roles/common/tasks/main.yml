@@ -5,6 +5,7 @@
     - fish
     - git
     - readline
+    - ssh
     - tmux
   ansible.builtin.copy:
     src: "{{ item }}/"
