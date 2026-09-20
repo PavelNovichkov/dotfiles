@@ -4,8 +4,10 @@
     - env
     - fish
     - git
+    - go
     - readline
     - ssh
+    - tex
     - tmux
   ansible.builtin.copy:
     src: "{{ item }}/"

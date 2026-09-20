@@ -1,5 +1,3 @@
 dotfiles_packages:
   - emacs
-  - go
   - julia
-  - tex
