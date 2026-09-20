@@ -3,6 +3,8 @@
 #
 # The default is the officially supported Linuxbrew prefix, which needs
 # superuser privileges to be created. Point this at a path inside $HOME such as
-# "{{ ansible_facts['user_dir'] }}/.local/opt/homebrew"
-# to get an unprivileged, per-user installation instead.
+# "{{ ansible_facts['user_dir'] }}/.linuxbrew"
+# to get an unprivileged, per-user installation instead. Note that with shorter
+# prefixes Homebrew can use pre-built binaries (bottles) instead of building
+# packages from source.
 homebrew_prefix: /home/linuxbrew/.linuxbrew
