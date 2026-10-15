@@ -1,3 +1,9 @@
+- name: "make the ssh directory private"
+  ansible.builtin.file:
+    path: "{{ ansible_facts['user_dir'] }}/.ssh"
+    state: directory
+    mode: "0700"
+
 - name: "install dotfiles"
   loop:
     - bash
@@ -5,6 +11,7 @@
     - fish
     - git
     - go
+    - julia
     - readline
     - ssh
     - tex
