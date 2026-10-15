@@ -5,6 +5,7 @@
     - fish
     - git
     - go
+    - julia
     - readline
     - ssh
     - tex
