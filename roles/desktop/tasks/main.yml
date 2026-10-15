@@ -1,5 +1,6 @@
 - name: "install dotfiles"
   loop:
+    - emacs
     - fish
     - git
     - gopass
