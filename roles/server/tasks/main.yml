@@ -1,0 +1,7 @@
+- name: "install dotfiles"
+  loop:
+    - ssh
+  ansible.builtin.copy:
+    src: "{{ item }}/"
+    dest: "{{ ansible_facts['user_dir'] }}/"
+    mode: preserve
