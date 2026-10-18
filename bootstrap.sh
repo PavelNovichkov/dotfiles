@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Bootstrap a fresh workstation: install Homebrew in its default prefix and
+# Ansible from it, so that ./deploy can take over. Run from the repo root.
+#
+# This duplicates roles/homebrew (minus the personal tap), since Ansible is not
+# available yet; keep the two in sync.
+set -euo pipefail
+
+prefix=/home/linuxbrew/.linuxbrew
+brew="$prefix/bin/brew"
+
+# The default prefix lives outside of $HOME and can only be created by root.
+[[ -O $prefix ]] || sudo install -d -o "$(id -u)" -g "$(id -g)" -m 0755 "$prefix"
+
+# Leave an existing checkout alone: it is updated by `brew update`, not by us.
+if [[ ! -d $prefix/Homebrew ]]; then
+    git clone https://github.com/Homebrew/brew.git "$prefix/Homebrew"
+    fresh_clone=1
+fi
+
+install -d -m 0775 "$prefix/bin"
+ln -sfn ../Homebrew/bin/brew "$brew"
+
+[[ -v fresh_clone ]] && "$brew" update --force --quiet
+
+install -d "$HOME/.config/environment.d"
+sed "s|{{ homebrew_prefix }}|$prefix|g" roles/homebrew/templates/homebrew.conf.j2 \
+    > "$HOME/.config/environment.d/homebrew.conf"
+
+"$brew" install ansible

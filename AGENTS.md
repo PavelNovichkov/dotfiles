@@ -2,7 +2,8 @@
 
 Personal dotfiles for Linux, packaged as Ansible roles, plus a `deploy` script
 that applies one role to one host (`./deploy HOST ROLE`, run from the repo
-root).
+root). On a fresh workstation, `./bootstrap.sh` first installs Homebrew and
+Ansible from it; it duplicates `roles/homebrew`, so keep the two in sync.
 
 ## Layout
 
