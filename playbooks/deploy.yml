@@ -1,0 +1,7 @@
+- name: "run one role"
+  hosts: "{{ target_host | mandatory }}"
+  gather_facts: true
+  tasks:
+    - name: "include {{ target_role }}"
+      ansible.builtin.include_role:
+        name: "{{ target_role | mandatory }}"
