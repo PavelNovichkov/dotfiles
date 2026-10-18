@@ -16,7 +16,6 @@ root).
   and public `host_vars`.
 - `playbooks/` — `deploy.yml`, used by `deploy`, and `pass.sh`, the sudo
   askpass helper.
-
 - `roles/common/` — dotfiles for every host (bash, fish, git, ssh, tmux,
   readline, environment, go, julia, tex).
 - `roles/desktop/` — additions for graphical workstations (xkb layouts, recoll,
