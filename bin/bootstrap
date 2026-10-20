@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 # Bootstrap a fresh workstation: install Homebrew in its default prefix and
-# Ansible from it, so that ./deploy can take over. Run from the repo root.
+# Ansible from it, so that ./deploy can take over.
 #
 # This duplicates roles/homebrew (minus the personal tap), since Ansible is not
 # available yet; keep the two in sync.
 set -euo pipefail
+
+cd "${0%/*}/.."
 
 prefix=/home/linuxbrew/.linuxbrew
 brew="$prefix/bin/brew"

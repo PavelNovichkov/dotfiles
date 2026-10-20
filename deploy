@@ -12,4 +12,4 @@ target_host="$1"
 target_role="$2"
 shift 2
 
-exec env SUDO_ASKPASS="$PWD/playbooks/pass.sh" ansible-playbook ./playbooks/deploy.yml -e target_host="$target_host" -e target_role="$target_role" "$@"
+exec env SUDO_ASKPASS="$PWD/bin/askpass" ansible-playbook ./playbooks/deploy.yml -e target_host="$target_host" -e target_role="$target_role" "$@"

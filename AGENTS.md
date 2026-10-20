@@ -2,7 +2,7 @@
 
 Personal dotfiles for Linux, packaged as Ansible roles, plus a `deploy` script
 that applies one role to one host (`./deploy HOST ROLE`, run from the repo
-root). On a fresh workstation, `./bootstrap.sh` first installs Homebrew and
+root). On a fresh workstation, `bin/bootstrap` first installs Homebrew and
 Ansible from it; it duplicates `roles/homebrew`, so keep the two in sync.
 
 ## Layout
@@ -15,8 +15,8 @@ Ansible from it; it duplicates `roles/homebrew`, so keep the two in sync.
   copy anything from `private/` into the public repo.
 - `inventory/` — public inventory: `hosts.ini` (the workstation, `localhost`)
   and public `host_vars`.
-- `playbooks/` — `deploy.yml`, used by `deploy`, and `pass.sh`, the sudo
-  askpass helper.
+- `bin/` — `bootstrap` and `askpass`, the sudo askpass helper.
+- `playbooks/` — `deploy.yml`, used by `deploy`.
 - `roles/common/` — dotfiles for every host (bash, fish, git, ssh, tmux,
   readline, environment, go, julia, tex).
 - `roles/desktop/` — additions for graphical workstations (xkb layouts, recoll,
