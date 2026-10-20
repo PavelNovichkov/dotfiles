@@ -1,0 +1,9 @@
+- name: "install"
+  community.general.homebrew:
+    name: syncthing
+    state: present
+
+- name: "enable systemd service"
+  community.general.homebrew_services:
+    name: syncthing
+    state: present
