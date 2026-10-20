@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Bootstrap a fresh workstation: install Homebrew in its default prefix and
-# Ansible from it, so that ./deploy can take over.
+# Bootstrap a fresh workstation: install Homebrew in its default prefix, and
+# Ansible and just from it, so that `just deploy` can take over.
 #
 # This duplicates roles/homebrew (minus the personal tap), since Ansible is not
 # available yet; keep the two in sync.
@@ -29,4 +29,4 @@ install -d "$HOME/.config/environment.d"
 sed "s|{{ homebrew_prefix }}|$prefix|g" roles/homebrew/templates/homebrew.conf.j2 \
     > "$HOME/.config/environment.d/homebrew.conf"
 
-"$brew" install ansible
+"$brew" install ansible just

@@ -1,9 +1,9 @@
 # AGENTS.md
 
-Personal dotfiles for Linux, packaged as Ansible roles, plus a `deploy` script
-that applies one role to one host (`./deploy HOST ROLE`, run from the repo
-root). On a fresh workstation, `bin/bootstrap` first installs Homebrew and
-Ansible from it; it duplicates `roles/homebrew`, so keep the two in sync.
+Personal dotfiles for Linux, packaged as Ansible roles, plus a `justfile` whose
+`deploy` recipe applies one role to one host (`just deploy HOST ROLE`). On a
+fresh workstation, `bin/bootstrap` first installs Homebrew and Ansible and just
+from it; it duplicates `roles/homebrew`, so keep the two in sync.
 
 ## Layout
 
@@ -16,7 +16,7 @@ Ansible from it; it duplicates `roles/homebrew`, so keep the two in sync.
 - `inventory/` — public inventory: `hosts.ini` (the workstation, `localhost`)
   and public `host_vars`.
 - `bin/` — `bootstrap` and `askpass`, the sudo askpass helper.
-- `playbooks/` — `deploy.yml`, used by `deploy`.
+- `playbooks/` — `deploy.yml`, used by `just deploy`.
 - `roles/common/` — dotfiles for every host (bash, fish, git, ssh, tmux,
   readline, environment, go, julia, tex).
 - `roles/desktop/` — additions for graphical workstations (xkb layouts, recoll,
