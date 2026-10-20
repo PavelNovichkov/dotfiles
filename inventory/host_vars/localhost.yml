@@ -1,4 +1,5 @@
-# sudo -A fails without SUDO_ASKPASS, so only pass it along with the helper.
-ansible_become_flags: "{{ '-A ' if lookup('ansible.builtin.env', 'SUDO_ASKPASS') else '' }}-H -k"
+# Read the sudo password from the askpass helper when there is one, and from
+# Ansible via stdin otherwise (the default sudo flags include -S for that).
+ansible_become_flags: "{{ '-A' if lookup('ansible.builtin.env', 'SUDO_ASKPASS') else '-S' }} -H -k"
 ansible_connection: local
 ansible_python_interpreter: "/usr/bin/python3"

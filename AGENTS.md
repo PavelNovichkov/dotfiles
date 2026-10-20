@@ -38,7 +38,8 @@ from it; it duplicates `roles/homebrew`, so keep the two in sync.
   `just yubikey=false ...` drops the helper and has Ansible prompt for the
   password instead, which is meant for when the YubiKey is absent (see below),
   e.g. on the first run after bootstrap. `localhost`'s `ansible_become_flags`
-  pass `-A` only when `SUDO_ASKPASS` is set.
+  therefore pass `-A` when `SUDO_ASKPASS` is set and `-S` (read the password
+  from Ansible via stdin) otherwise.
 - sudo on the workstation uses a YubiKey, so Ansible's become password handling
   (`--become-password-file`, `become_password_file`) does not work; see
   <https://github.com/sudo-project/sudo/issues/112>. Do not suggest it.
