@@ -1,7 +1,8 @@
 # AGENTS.md
 
 Personal dotfiles for Linux, packaged as Ansible roles, plus a `justfile` whose
-`deploy` recipe applies one role to one host (`just deploy HOST ROLE`). On a
+`deploy` recipe applies one role to one host (`just deploy HOST ROLE`) and
+whose `play` recipe runs a whole private playbook (`just play PLAYBOOK`). On a
 fresh workstation, `bin/bootstrap` first installs Homebrew and Ansible and just
 from it; it duplicates `roles/homebrew`, so keep the two in sync.
 
@@ -9,7 +10,8 @@ from it; it duplicates `roles/homebrew`, so keep the two in sync.
 
 - `private/` — a separate private git repo checked out here and gitignored. It
   holds the real inventory (`private/inventory/hosts.ini` and private
-  `host_vars`), private playbooks and private roles. `ansible.cfg` reads it
+  `host_vars`), private playbooks (`private/playbooks/*.yml`, one per host by
+  convention, run by `just play`) and private roles. `ansible.cfg` reads it
   alongside the public `inventory/` and `roles/`; private `host_vars` override
   public ones for the same variable. `private.example/` shows its layout. Never
   copy anything from `private/` into the public repo.

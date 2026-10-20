@@ -18,3 +18,7 @@ default:
 # Apply one role to one host
 deploy host role *args:
     {{ ansible_playbook }} playbooks/deploy.yml -e target_host="$1" -e target_role="$2" "${@:3}"
+
+# Run a private playbook, private/playbooks/PLAYBOOK.yml
+play playbook *args:
+    {{ ansible_playbook }} "private/playbooks/$1.yml" "${@:2}"
