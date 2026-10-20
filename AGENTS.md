@@ -32,6 +32,11 @@ from it; it duplicates `roles/homebrew`, so keep the two in sync.
 
 - Deployments only ever run from the main workstation, so `localhost` is always
   the workstation. Local-only mechanisms (e.g. `SUDO_ASKPASS`) are fine.
+- sudo reads its password from `bin/askpass` (gopass, which needs the YubiKey).
+  `just yubikey=false ...` drops the helper and has Ansible prompt for the
+  password instead, which is meant for when the YubiKey is absent (see below),
+  e.g. on the first run after bootstrap. `localhost`'s `ansible_become_flags`
+  pass `-A` only when `SUDO_ASKPASS` is set.
 - sudo on the workstation uses a YubiKey, so Ansible's become password handling
   (`--become-password-file`, `become_password_file`) does not work; see
   <https://github.com/sudo-project/sudo/issues/112>. Do not suggest it.

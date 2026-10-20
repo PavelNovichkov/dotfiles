@@ -1,3 +1,4 @@
-ansible_become_flags: "-A -H -k"
+# sudo -A fails without SUDO_ASKPASS, so only pass it along with the helper.
+ansible_become_flags: "{{ '-A ' if lookup('ansible.builtin.env', 'SUDO_ASKPASS') else '' }}-H -k"
 ansible_connection: local
 ansible_python_interpreter: "/usr/bin/python3"
