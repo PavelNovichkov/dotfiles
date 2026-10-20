@@ -1,2 +1,2 @@
-#!/bin/sh
-gopass show -o ansible/user
+#!/usr/bin/env bash
+exec gopass show -o ansible/user
