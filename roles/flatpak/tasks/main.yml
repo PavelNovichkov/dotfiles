@@ -1,0 +1,22 @@
+- name: "enable Flathub"
+  community.general.flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+
+- name: "get Fedora-origin flatpaks"
+  ansible.builtin.shell: |
+    flatpak list --app --columns=application,origin | awk '$2 == "fedora" { print $1 }'
+  register: fedora_flatpaks
+  changed_when: false
+
+- name: "reinstall Fedora flatpaks from Flathub"
+  ansible.builtin.command:
+    cmd: "flatpak install -y --reinstall flathub {{ item }}"
+  loop: "{{ fedora_flatpaks.stdout_lines }}"
+  when: fedora_flatpaks.stdout_lines | length > 0
+
+- name: "remove Fedora remote"
+  community.general.flatpak_remote:
+    name: fedora
+    state: absent
