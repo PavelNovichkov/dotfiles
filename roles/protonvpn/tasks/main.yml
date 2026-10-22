@@ -1,0 +1,21 @@
+- name: "install gpg key"
+  become: true
+  ansible.builtin.rpm_key:
+    key: "https://repo.protonvpn.com/fedora-\
+    {{ ansible_facts['distribution_major_version'] }}-stable/public_key.asc"
+    fingerprint: "6929133BDE1CE1CFA9EDB286D84176F6844830D4"
+    state: present
+
+- name: "enable repository"
+  become: true
+  ansible.builtin.dnf:
+    name: "https://repo.protonvpn.com/fedora-\
+    {{ ansible_facts['distribution_major_version'] }}-stable/protonvpn-stable-release/\
+    protonvpn-stable-release-1.0.4-1.noarch.rpm"
+    state: present
+
+- name: "install app"
+  become: true
+  ansible.builtin.dnf:
+    name: proton-vpn-gnome-desktop
+    state: present
